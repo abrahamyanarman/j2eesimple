@@ -1,0 +1,38 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.username">db_admin</property>
+        <property name="hibernate.connection.password">Exnikner1214</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcltestdb</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
+
+        <property name="connection_pool_size">1</property>
+
+        <property name="hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+
+        <!--<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Admin123456</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/test</property>
+
+
+        <property name="connection_pool_size">1</property>
+
+        <property name="hbm2ddl.auto">create</property>
+
+        <property name="show_sql">true</property>
+        <property name="logging.level.org.hibernate.SQL">debug</property>
+        <property name="logging.level.org.hibernate.type.descriptor.sql">trace</property>-->
+
+       <mapping class="jpa.entities.User"/>
+       <mapping class="jpa.entities.UserRoles"/>
+
+    </session-factory>
+</hibernate-configuration>
